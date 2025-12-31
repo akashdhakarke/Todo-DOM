@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <form>
+    <label>Enter your name</label><br>
+    <input id="name" type="text" placeholder="Enter your name">
+    <br><br>
+    <label>Enter your Email</label><br>
+    <input id="email" type="email" placeholder="Enter your Email">
+    <br><br>
+    <label>Enter your Number</label><br>
+    <input id="number" type="number" placeholder="Enter your Number">
+    <br><br>
+    <label>Enter your Password</label><br>
+    <input id="pass" type="password" placeholder="Enter your Password">
+    <br><br>
+    <input id="submit" type="submit">
+  </form>
+
+</body>
+<script>
+  let form = document.querySelector("form")
+  let name = document.getElementById("name")
+  let email = document.getElementById("email")
+  let number = document.getElementById("number") 
+  let password = document.getElementById("pass")
+  let submit = document.getElementById("submit")
+
+  form.addEventListener("submit",getdata)
+
+  function getdata(){
+    event.preventDefault()
+    console.log(name.value);
+    console.log(email.value);
+    console.log(number.value);
+    console.log(password.value);
+    
+  }
+    submit.addEventListener("mouseover",btn1)
+
+    function btn1(){
+      submit.style.color = "white"
+      submit.style.backgroundColor = "indianred"
+      submit.style.fontFamily = "Sans-serif"
+      submit.style.fontSize = "18"
+    }
+    
+  
+</script>
+</html>
